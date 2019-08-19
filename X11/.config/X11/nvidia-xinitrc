@@ -1,0 +1,10 @@
+set VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
+
+$HOME/.fehbg &
+#compton --inactive-dim 0.2 --no-fading-openclose --inactive-dim-fixed --config /dev/null &
+compton --config $HOME/.config/compton/compton.conf &
+
+sxhkd &
+exec bspwm > .local/share/log/nvidia-bspwm.log 2>&1
+
+#exec dwm
